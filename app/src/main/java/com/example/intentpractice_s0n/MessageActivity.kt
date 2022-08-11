@@ -11,8 +11,8 @@ class MessageActivity : AppCompatActivity() {
 
         // 이 화면에 들어올때 첨부된 데이터를 텍스트뷰에 반영.
         val intentMessage = intent.getStringExtra("message")  //message라는 이름표 달아 보낸 문자열(String)을 변수에 저장.
+//받아준 변수를 receiveMessageTxt 텍스트에 저장.
+        receiveMessageTxt.text= intentMessage
 
-        receiveMessageTxt.text=intentMessage
-        ㅎ
     }
 }
