@@ -13,6 +13,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        naverBtn.setOnClickListener {
+
+            val myUri = Uri.parse("https://naver.com")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)  //myUri에 적혀있는, 즉 네이버로 간다
+            startActivity(myIntent)
+
+        }
+
+        kakaoStoreBtn.setOnClickListener {
+
+            val myUri = Uri.parse("market://details?id=com.kakao.talk")
+            val myIntent = Intent(Intent.ACTION_VIEW, myUri)  //myUri에 적혀있는, 즉 네이버로 간다
+            startActivity(myIntent)
+        }
+
         smsBtn.setOnClickListener {
 
             val inputPhoneNum = phoneNumEdt.text.toString()
